@@ -1,81 +1,181 @@
-# Laptop Price Predictor 💻
+Laptop Price Predictor 💻
+https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge&logo=python&logoColor=white
+https://img.shields.io/badge/Streamlit-1.25-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white
+https://img.shields.io/badge/SciKit--Learn-1.3-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white
+https://img.shields.io/badge/Render-46B3A9?style=for-the-badge&logo=render&logoColor=white
+https://img.shields.io/badge/status-complete-success?style=for-the-badge
+https://img.shields.io/badge/R%C2%B2-0.874-success?style=for-the-badge
+https://img.shields.io/badge/MAE-0.166-brightgreen?style=for-the-badge
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.25-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/SciKit--Learn-1.3-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Project Status](https://img.shields.io/badge/status-complete-success?style=for-the-badge)
+A machine learning web application that accurately predicts laptop prices based on hardware specifications, achieving 87.4% accuracy with a Random Forest Regressor model.
 
-An intuitive web application that predicts laptop prices based on their hardware and software specifications, powered by a Random Forest Regressor model.
+🚀 Live Demo
+Experience the application live: Laptop Price Predictor
 
----
+Note: The application may take a few moments to load on first visit due to Render's free tier hosting.
 
-## 🚀 Live Demo & Preview
+📊 Model Performance
+After extensive testing of multiple machine learning algorithms, the Random Forest Regressor demonstrated superior performance:
 
-This project is built with Streamlit, creating a user-friendly and interactive interface. Below is a quick preview of the application in action.
+Model Comparison Results:
+Linear Regression: Baseline model
 
+Ridge & Lasso Regression: Regularized linear models
 
-***(Note: To create a GIF, use a free tool like [ScreenToGif](https://www.screentogif.com/) or [Kap](https://getkap.co/). Record your screen while using the app, save it as a GIF, upload it to your repository, and then replace this text with `![Demo GIF](demo.gif)`)***
+K-Nearest Neighbors (KNR): Distance-based approach
 
----
+Support Vector Regressor (SVR): With hyperparameter tuning
 
-## ✨ Key Features
+Decision Tree Regressor: Tree-based baseline
 
--   **Dynamic Price Prediction:** Get real-time price estimates by selecting various laptop configurations.
--   **Comprehensive Specs:** Input a wide range of specifications, including Brand, RAM, CPU, GPU, Storage, and more.
--   **Accurate ML Model:** Utilizes a Random Forest Regressor, which performed best among several tested models, for robust predictions.
--   **Interactive UI:** A clean and simple interface built with Streamlit for a seamless user experience.
+XGBoost Regressor: Advanced gradient boosting
 
----
+🏆 Best Performing Model: Random Forest Regressor
+Test R² Score: 0.8745 (87.4% accuracy)
 
-## 🛠️ Tech Stack & Data Pipeline
+Test MAE: 0.1659
 
-This project leverages a powerful stack of data science and web development tools.
+Status: Hyperparameter tuned for optimal performance
 
--   **Backend & Modeling:** Python, Pandas, NumPy, Scikit-learn
--   **Frontend:** Streamlit
--   **Data Source:** `laptops.csv` (A dataset containing over 1300 laptop records)
+✨ Key Features
+Real-time Price Prediction: Get instant price estimates based on selected specifications
 
-The data pipeline involves several key steps to ensure model accuracy:
-1.  **Data Cleaning:** Handled missing values and corrected data types for `Ram` and `Weight`.
-2.  **Feature Engineering:**
-    -   Calculated **Pixels Per Inch (PPI)** from screen resolution and size for a more informative display feature.
-    -   Extracted **CPU, GPU, and OS brands** from complex text fields into clean, categorical features.
-    -   Transformed the `Memory` column into separate numerical features for `HDD` and `SSD`.
-3.  **Data Transformation:** Applied a **log transformation** to the target variable (`Price`) to normalize its distribution, improving model performance. The final prediction is exponentiated to return the actual price.
+Comprehensive Configuration: Input brand, RAM, CPU, GPU, storage, display, and more
 
----
+Advanced ML Pipeline: Feature engineering and data preprocessing for accurate predictions
 
-## ⚙️ Setup and Installation
+User-Friendly Interface: Clean Streamlit interface for easy interaction
 
-To run this project on your local machine, please follow these steps:
+Model Interpretability: Transparent pricing factors based on feature importance
 
-1.  **Clone the Repository**
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
-    cd YOUR_REPOSITORY_NAME
-    ```
+📁 Dataset
+The model is trained on a comprehensive dataset (laptops.csv) containing over 1,300 laptop records with detailed specifications. The dataset is included in the repository and features:
 
-2.  **Create and Activate a Virtual Environment**
-    ```bash
-    # For Windows
-    python -m venv venv
-    .\venv\Scripts\activate
+Brand specifications (Dell, Lenovo, HP, Apple, etc.)
 
-    # For macOS/Linux
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
+Hardware details (RAM, CPU, GPU, Storage Type/Size)
 
-3.  **Install Required Dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
+Display characteristics (Size, Resolution, Touchscreen)
 
----
+Physical attributes (Weight, Dimensions)
 
-## 🏃‍♂️ How to Run
+🛠️ Tech Stack & Architecture
+Backend & Machine Learning
+Python 3.9+ - Core programming language
 
-With all dependencies installed, launch the Streamlit application with the following command:
+Pandas & NumPy - Data manipulation and numerical operations
 
-```bash
+Scikit-learn - Machine learning algorithms and pipeline
+
+XGBoost - Advanced gradient boosting implementation
+
+Frontend & Deployment
+Streamlit - Interactive web application framework
+
+Render - Cloud deployment platform
+
+Data Pipeline
+Data Cleaning: Handling missing values and correcting data types
+
+Feature Engineering:
+
+Pixels Per Inch (PPI) calculation from screen specs
+
+Brand extraction from CPU/GPU/OS text fields
+
+Memory transformation into HDD/SSD numerical features
+
+Target Transformation: Log transformation of prices for normal distribution
+
+Model Training: Multi-algorithm comparison with hyperparameter tuning
+
+⚙️ Local Installation & Setup
+Follow these steps to run the project locally:
+
+1. Clone the Repository
+bash
+git clone https://github.com/YOUR_USERNAME/laptop-price-predictor.git
+cd laptop-price-predictor
+2. Create Virtual Environment
+bash
+# Windows
+python -m venv venv
+.\venv\Scripts\activate
+
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+3. Install Dependencies
+bash
+pip install -r requirements.txt
+4. Run the Application
+bash
 streamlit run app_1.py
+The application will open in your default browser at http://localhost:8501
+
+📊 Model Training Details
+Algorithms Tested:
+Linear Models: Linear Regression, Ridge, Lasso
+
+Instance-based: K-Nearest Neighbors
+
+Kernel Methods: Support Vector Regressor (tuned)
+
+Tree-based: Decision Tree, Random Forest (tuned), XGBoost
+
+Hyperparameter Tuning:
+Conducted on Random Forest and SVR models
+
+Used GridSearchCV/RandomizedSearchCV for optimal parameters
+
+Focus on maximizing R² score while minimizing MAE
+
+Validation Strategy:
+Train-Test split with stratification
+
+Cross-validation for robust performance estimation
+
+Comprehensive error metric analysis
+
+🎯 Usage Guide
+Select Brand: Choose from popular laptop manufacturers
+
+Configure RAM: 4GB to 64GB options available
+
+Choose CPU Type: Intel Core i3/i5/i7/i9, AMD Ryzen series
+
+Select GPU: Integrated vs. Dedicated graphics options
+
+Set Storage: SSD and HDD capacity combinations
+
+Display Settings: Screen size, resolution, and touch options
+
+Get Prediction: Click to receive instant price estimate
+
+🔮 Future Enhancements
+Integration with real-time market price data
+
+Additional features (battery life, build materials)
+
+Price trend analysis and forecasting
+
+Mobile application version
+
+Multi-currency support
+
+User review sentiment integration
+
+🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+Fork the project
+
+Create your feature branch (git checkout -b feature/AmazingFeature)
+
+Commit your changes (git commit -m 'Add some AmazingFeature')
+
+Push to the branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+⭐ If you find this project helpful, please give it a star on GitHub!
