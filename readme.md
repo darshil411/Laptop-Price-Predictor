@@ -112,76 +112,59 @@ streamlit run app_1.py
 ```
 The application will open in your default browser at http://localhost:8501
 
-📊 Model Training Details
-Algorithms Tested:
-Linear Models: Linear Regression, Ridge, Lasso
+## 📊 Model Training Details
 
-Instance-based: K-Nearest Neighbors
+### Algorithms Tested:
+1.  **Linear Models**: Linear Regression, Ridge, Lasso
+2.  **Instance-based**: K-Nearest Neighbors
+3.  **Kernel Methods**: Support Vector Regressor (tuned)
+4.  **Tree-based**: Decision Tree, Random Forest (tuned), XGBoost
 
-Kernel Methods: Support Vector Regressor (tuned)
+### Hyperparameter Tuning:
+-   Conducted on Random Forest and SVR models
+-   Used GridSearchCV/RandomizedSearchCV for optimal parameters
+-   Focus on maximizing R² score while minimizing MAE
 
-Tree-based: Decision Tree, Random Forest (tuned), XGBoost
+### Validation Strategy:
+-   Train-Test split with stratification
+-   Cross-validation for robust performance estimation
+-   Comprehensive error metric analysis
 
-Hyperparameter Tuning:
-Conducted on Random Forest and SVR models
+---
 
-Used GridSearchCV/RandomizedSearchCV for optimal parameters
+## 🎯 Usage Guide
 
-Focus on maximizing R² score while minimizing MAE
+1.  **Select Brand**: Choose from popular laptop manufacturers
+2.  **Configure RAM**: 4GB to 64GB options available
+3.  **Choose CPU Type**: Intel Core i3/i5/i7/i9, AMD Ryzen series
+4.  **Select GPU**: Integrated vs. Dedicated graphics options
+5.  **Set Storage**: SSD and HDD capacity combinations
+6.  **Display Settings**: Screen size, resolution, and touch options
+7.  **Get Prediction**: Click to receive instant price estimate
 
-Validation Strategy:
-Train-Test split with stratification
+---
 
-Cross-validation for robust performance estimation
+## 🔮 Future Enhancements
 
-Comprehensive error metric analysis
+-   [ ] Integration with real-time market price data
+-   [ ] Additional features (battery life, build materials)
+-   [ ] Price trend analysis and forecasting
+-   [ ] Mobile application version
+-   [ ] Multi-currency support
+-   [ ] User review sentiment integration
 
-🎯 Usage Guide
-Select Brand: Choose from popular laptop manufacturers
+---
 
-Configure RAM: 4GB to 64GB options available
+## 🤝 Contributing
 
-Choose CPU Type: Intel Core i3/i5/i7/i9, AMD Ryzen series
-
-Select GPU: Integrated vs. Dedicated graphics options
-
-Set Storage: SSD and HDD capacity combinations
-
-Display Settings: Screen size, resolution, and touch options
-
-Get Prediction: Click to receive instant price estimate
-
-🔮 Future Enhancements
-[ ] Integration with real-time market price data
-
-[ ] Additional features (battery life, build materials)
-
-[ ] Price trend analysis and forecasting
-
-[ ] Mobile application version
-
-[ ] Multi-currency support
-
-[ ] User review sentiment integration
-
-🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-Fork the project
+1.  Fork the project
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
+---
 
-Commit your changes (git commit -m 'Add some AmazingFeature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-⭐ If you find this project helpful, please give it a star on GitHub!
-
-
-
-
-
-
-
+**⭐ If you find this project helpful, please give it a star on GitHub!**
