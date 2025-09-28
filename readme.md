@@ -92,7 +92,7 @@ Follow these steps to run the project locally:
 git clone [https://github.com/YOUR_USERNAME/laptop-price-predictor.git](https://github.com/YOUR_USERNAME/laptop-price-predictor.git)
 cd laptop-price-predictor
 2. Create Virtual Environment
-
+```bash
 # Windows
 python -m venv venv
 .\venv\Scripts\activate
@@ -101,10 +101,10 @@ python -m venv venv
 python3 -m venv venv
 source venv/bin/activate
 3. Install Dependencies
-
+```bash
 pip install -r requirements.txt
 4. Run the Application
-
+```bash
 streamlit run app_1.py
 The application will open in your default browser at http://localhost:8501
 
